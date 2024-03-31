@@ -33,7 +33,7 @@ function readFile(id) {
         var result = JSON.parse(e.target.result);
         var formatted = JSON.stringify(result, null, 24);
             // document.querySelector('.' + id).innerText = formatted;
-            input_text = formatted;
+            input_text = result;
       }
 
       reader.readAsText(file);
