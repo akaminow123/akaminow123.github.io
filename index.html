@@ -42,7 +42,31 @@ function readFile(id) {
 async function gen_pf() {
 // inp.innerText = "A";
 // password.innerText = input_text;
-const { proof, publicSignals } = await snarkjs.groth16.fullProve(input_text);
+const { proof, publicSignals } = await snarkjs.groth16.fullProve({
+"sig_r": "1569741041891349428211619875629692646713878580488951882872807239978982417318",
+"sig_s_inv": "2033452189727618208592318078373181530458350425053777778404816841884189758687",
+"new_bucket": "1",
+"new_object": "2",
+"new_serial": 12345,
+"new_date": "240315",
+"password": 123,
+"old_buckets": [
+"0",
+"0"
+],
+"old_object_counts": [
+0,
+0
+],
+"old_serial": 0,
+"old_dates": [
+0,
+0,
+0,
+0
+],
+"r": 5
+});
 pub.innerText = publicSignals;
 pf.innerText = proof;
 }
