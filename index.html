@@ -42,7 +42,7 @@ function readFile(id) {
 async function gen_pf() {
 // inp.innerText = "A";
 // password.innerText = input_text;
-const { proof, publicSignals } = await snarkjs.groth16.fullProve(result);
+const { proof, publicSignals } = await snarkjs.groth16.fullProve(input_text);
 pub.innerText = publicSignals;
 pf.innerText = proof;
 }
