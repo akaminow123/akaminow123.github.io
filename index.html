@@ -41,8 +41,8 @@ function readFile(id) {
 
 async function gen_pf() {
 inp.innerText = input_text;
-const { proof, publicSignals } = await snarkjs.groth16.fullProve(JSON.parse(input_text));
-pub.innerText = publicSignals;
-pf.innerText = proof;
+// const { proof, publicSignals } = await snarkjs.groth16.fullProve(JSON.parse(input_text));
+// pub.innerText = publicSignals;
+// pf.innerText = proof;
 }
 </script>
